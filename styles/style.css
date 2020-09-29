@@ -28,6 +28,19 @@ body {
     background-color: var(--color2);
 }
 
+.rules {
+    text-align: center;
+    width: 400px;
+}
+
+button {
+    margin-top: 8%;
+}
+
+#user-input {
+    margin-top: 5%;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -77,7 +90,9 @@ h2 {
 }
 
 .main-logo {
-    animation: pulse 5s infinite ease-in-out;
+   
+    width: 400px;
+    height: 200px;
 }
 
 header img {
