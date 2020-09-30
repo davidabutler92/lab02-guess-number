@@ -4,6 +4,7 @@ const userGuess = document.getElementById('user-number');
 const numOfGuessLeft = document.getElementById('guesses-left');
 const results = document.getElementById('results');
 const button = document.getElementById('guess-button');
+const playAgainButton = document.getElementById('play-again');
 
 let guessesLeft = 3;
 const randomNumber = Math.ceil(Math.random() * 5);
@@ -16,18 +17,24 @@ button.addEventListener('click', () => {
 
     if (comparedResults === 0) {
         results.textContent = ('YAY! WINNER WINNER CHICKEN DINNER!');
-        return;
-        
-    } if (comparedResults === -1) {
+        button.style.display = 'none';
+        playAgainButton.style.display = 'block';
+    } else if (comparedResults === -1) {
         results.textContent = 'Oof, Your guess was too low, guess again.';
         guessesLeft--;
         numOfGuessLeft.textContent = guessesLeft;
-    } if (comparedResults === 1) {
+    } else if (comparedResults === 1) {
         results.textContent = 'Oof, your guess was too high, gues again.';
         guessesLeft--;
-        numOfGuessLeft.textContent = guessesLeft; }
-    if (guessesLeft === 0) {
+        numOfGuessLeft.textContent = guessesLeft; 
+    } else if (guessesLeft === 0) {
         results.textContent = 'Oops, you ran out of guesses, you lose!';
-        return;
+        button.style.display = 'none';
+        playAgainButton.style.display = 'block';
     } 
+
+    playAgainButton.addEventListener('click', () => {
+        
+    });
+
 });

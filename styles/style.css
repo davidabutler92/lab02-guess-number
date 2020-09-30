@@ -28,6 +28,9 @@ body {
     background-color: var(--color2);
 }
 
+#play-again {
+    display: none;
+}
 
 .rules {
     text-align: center;
